@@ -1,0 +1,6 @@
+Normalizasyon
+Entity
+DAL
+BLL
+API
+MVC
