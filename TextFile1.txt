@@ -4,3 +4,19 @@ DAL
 BLL
 API
 MVC
+
+
+•	Ýþ programý yapýlacak personele iþ atamasý yapýlacak.
+
+•	Personel arayüzü olacak ve iþ durumunu görecek. 
+
+•	Ýþ programýndan bir iþi bitirdiði zaman personel iþ hakkýnda taleplerin karþýlanýp karþýlanamadýðý konusunda ayrýca ek olarak almak istediði notlarý her bir iþ kaydýna girip kaydý o þekilde kapatmalý. Ýþ ancak tamamlandýðý taktirde personelin listesinden çýkmalý.
+•	Ýþ programý içerisinde belirtilen iþin adresi için konum bilgisi verilebilirse çok iyi olur fakat adres bilgisi üzerinden de çalýþabiliriz.
+•	Müþterilerin cari durumlarýný güncel olarak görmek istiyoruz. Kimin ne kadar bakiyesi varsa muhasebe personelimiz tarafýndan bu alýnan ödemelere müteakip güncelleyerek mali durumu her an raporlayabilmeli.
+•	Depo takibini yapmak istiyoruz. Depomuza giren ve çýkan ürünleri birim miktarlarýnca tutmak önceden belirlediðimiz kritik adetlere geldiði taktirde sipariþ verilmesi için bize uyarýda bulunmasýný istiyoruz. Bazen gözümüzden kaçýp malzeme bittikten sonra iþin ortasýnda acilen daha pahalýya da olsa malzeme almak zorunda kalýyoruz. Bu sorunu çözmek için depomuzu güncel olarak görmek istiyoruz. Ayrýca depodan çýkan malzemelerde kim tarafýndan alýndýðýný da bilmek istiyorum. Bu bazen direkt bir müþteriye bazen de personelim tarafýndan müþteri asansörüne monte edilmek üzere alýnabilir.
+•	Müþterilere verdiðimiz teklifleri geçmiþe yönelik kayýt altýnda tutmak istiyoruz. Genellikle pdf olarak bunu tutuyoruz fakat sistemde elimizin altýnda bu bilgiler kolay ulaþýlabilir bir vaziyette olsa çok iyi olur.
+•	Asansörlerin yýllýk denetim tarihleri de belirlenmiþ bir vakitte önceden bize ve müþterimize bildirilmesini istiyorum. Asansör kýrmýzý etiketli mi mavi etiketli mi yeþil mi bunlarý bilmek istiyorum. Yýl yýl bu asansörlerin denetim sonuçlarýný kayýt altýnda tutabilirsek buda þeffaflýk açýsýndan müthiþ olur.
+
+•	Tedarik edilecek ürünler için taleplerin alýnmasý için de bir kýsým olmalý programda. Talep edenin belli olduðu(Müþteri, personel, depo) bir talep formu tutulmalý ki  satýnalma personeli talepleri zamanýnda karþýlayabilsin. 
+
+•	Personel bu programý telefonundan internete baðlanarak web sitemizden kullanabilir. Ancak ofis tarafýnda programý webden kullanmak zorunda deðiliz.
