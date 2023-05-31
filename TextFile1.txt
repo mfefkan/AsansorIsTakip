@@ -6,17 +6,39 @@ API
 MVC
 
 
-•	Ýþ programý yapýlacak personele iþ atamasý yapýlacak.
+•	Ýþ programý yapýlacak personele iþ atamasý yapýlacak
+•	Personel arayüzü olacak ve iþ durumunu görecek. Personel iþe açýklama býrakacak. Tamamlanmadýðý sürece kendi üzerinden iþi atamayacak
+•	Atanan iþ ile ilgili konum bilgisi verilecek.
+•	Müþteri cari durumu idari personel tarafýndan görüntülenebilmeli.
+•	Depo Min. Stok - Max. Stok sistemi olmalý. Sistem uyarmalý. Depo giriþ ve çýkýþ kayýtlarý detaylarýyla tutulmalý.
+•	Müþterilere verilen teklifler için bir page olmalý.(Dolayýsýyla bu page'den çýktý alýnabilir,pdf alýnabilir.)
+•	Asansörlerin denetim tarihlerinden öncesinde uyarma sistemi olmalý. Buna göre planlý olarak denetim öncesi hazýrlýklar yapýlabilmeli
+• Doðabilecek satýnalma ihtiyaçlarý için teknik, idari ve satýnalma personelinin sisteme girebileceði bir satýnalma talebi olmalý. Buna göre satýnalma talebi yetkili onayýndan sonra iþleme alýnmalý. 
 
-•	Personel arayüzü olacak ve iþ durumunu görecek. 
+ENTITIES
 
-•	Ýþ programýndan bir iþi bitirdiði zaman personel iþ hakkýnda taleplerin karþýlanýp karþýlanamadýðý konusunda ayrýca ek olarak almak istediði notlarý her bir iþ kaydýna girip kaydý o þekilde kapatmalý. Ýþ ancak tamamlandýðý taktirde personelin listesinden çýkmalý.
-•	Ýþ programý içerisinde belirtilen iþin adresi için konum bilgisi verilebilirse çok iyi olur fakat adres bilgisi üzerinden de çalýþabiliriz.
-•	Müþterilerin cari durumlarýný güncel olarak görmek istiyoruz. Kimin ne kadar bakiyesi varsa muhasebe personelimiz tarafýndan bu alýnan ödemelere müteakip güncelleyerek mali durumu her an raporlayabilmeli.
-•	Depo takibini yapmak istiyoruz. Depomuza giren ve çýkan ürünleri birim miktarlarýnca tutmak önceden belirlediðimiz kritik adetlere geldiði taktirde sipariþ verilmesi için bize uyarýda bulunmasýný istiyoruz. Bazen gözümüzden kaçýp malzeme bittikten sonra iþin ortasýnda acilen daha pahalýya da olsa malzeme almak zorunda kalýyoruz. Bu sorunu çözmek için depomuzu güncel olarak görmek istiyoruz. Ayrýca depodan çýkan malzemelerde kim tarafýndan alýndýðýný da bilmek istiyorum. Bu bazen direkt bir müþteriye bazen de personelim tarafýndan müþteri asansörüne monte edilmek üzere alýnabilir.
-•	Müþterilere verdiðimiz teklifleri geçmiþe yönelik kayýt altýnda tutmak istiyoruz. Genellikle pdf olarak bunu tutuyoruz fakat sistemde elimizin altýnda bu bilgiler kolay ulaþýlabilir bir vaziyette olsa çok iyi olur.
-•	Asansörlerin yýllýk denetim tarihleri de belirlenmiþ bir vakitte önceden bize ve müþterimize bildirilmesini istiyorum. Asansör kýrmýzý etiketli mi mavi etiketli mi yeþil mi bunlarý bilmek istiyorum. Yýl yýl bu asansörlerin denetim sonuçlarýný kayýt altýnda tutabilirsek buda þeffaflýk açýsýndan müthiþ olur.
+- Customer, Elevator, Technical Staff, Administrative Staff, Purchasing Staff, Contract, Tasks, Offers, AppUser, AppUserProfile
 
-•	Tedarik edilecek ürünler için taleplerin alýnmasý için de bir kýsým olmalý programda. Talep edenin belli olduðu(Müþteri, personel, depo) bir talep formu tutulmalý ki  satýnalma personeli talepleri zamanýnda karþýlayabilsin. 
+NORMALIZATION
+---------------------------
+1 Customer		n Contract			One to Many
+1 Contract		1 Customer
+---------------------------
+1 Contract		n Elevator			One to Many
+1 Elevator		1 Contract
+---------------------------
+1 T.Staff		n Task				Many to Many
+1 Task			n T.Staff
+---------------------------
+1 Adm Staff		n Task				One to Many				1 admin n task açabilir, 1 task'ý 1 admin açar.
+1 Task			1 Adm Staff
+---------------------------
+1 Adm Staff		n Offer				One to Many
+1 Offer			1 Adm Staff
+---------------------------
+1 AppUser			1 AppUserProfile
+1 AppUserProfile	1 AppUser
 
-•	Personel bu programý telefonundan internete baðlanarak web sitemizden kullanabilir. Ancak ofis tarafýnda programý webden kullanmak zorunda deðiliz.
+
+
+
