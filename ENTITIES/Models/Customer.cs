@@ -11,5 +11,9 @@ namespace ENTITIES.Models
         public string CustomerName { get; set; }
         public string CustomerPhoneNumber { get; set; }
         public string CustomerMailAddress { get; set; }
+
+        //Relational Properties
+
+        public virtual List<Contract> Contracts { get; set; }
     }
 }
