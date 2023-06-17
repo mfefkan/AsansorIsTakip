@@ -15,6 +15,10 @@ namespace ENTITIES.Models
         public string DoorType { get; set; }
         public string ControlPanelType { get; set; }
 
+        //Relational Properties
+
+        public virtual Contract Contract { get; set; }
+
 
 
     }

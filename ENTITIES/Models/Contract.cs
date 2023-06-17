@@ -17,5 +17,6 @@ namespace ENTITIES.Models
         //Relational Properties
 
         public virtual Customer Customer { get; set; }
+        public virtual List<Elevator> Elevators { get; set; }
     }
 }
