@@ -17,7 +17,7 @@ MVC
 
 ENTITIES
 
-- Customer, Elevator, Technical Staff, Administrative Staff, Purchasing Staff, Contract, Tasks, Offers, AppUser, AppUserProfile
+- Customer, Elevator, Technical Staff(Personel), Administrative Staff(Personel), Contract, Tasks, Offers, AppUser, AppUserProfile ,Personel
 
 NORMALIZATION
 ---------------------------
@@ -27,7 +27,7 @@ NORMALIZATION
 1 Contract		n Elevator			One to Many
 1 Elevator		1 Contract
 ---------------------------
-1 T.Staff		n Task				Many to Many
+1 T.Staff		n Task				Many to Many   1 Technical Personel n task alabilir, 1 task n personel tarafýndan yapýlabilir.
 1 Task			n T.Staff
 ---------------------------
 1 Adm Staff		n Task				One to Many				1 admin n task açabilir, 1 task'ý 1 admin açar.

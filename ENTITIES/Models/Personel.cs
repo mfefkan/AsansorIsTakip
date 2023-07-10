@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace ENTITIES.Models
 {
-    public class Personel : BaseEntity
+    public abstract class Personel : BaseEntity
     {
         public string Name { get; set; }
         public string Surname { get; set; }
-        public string MyProperty { get; set; }
+        public string TCKNo { get; set; }
     }
 }

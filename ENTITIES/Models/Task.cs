@@ -9,7 +9,10 @@ namespace ENTITIES.Models
     public class Task : BaseEntity
     {
         public string Description { get; set; }
-        public int PersonelID { get; set; }
+
+        //RelationalProperties
+        public virtual List<TechnicalStaff> TechnicalStaff { get; set; }
+        public virtual List<AdministrativeStaff> AdministrativeStaff { get; set;}
 
     }
 }
